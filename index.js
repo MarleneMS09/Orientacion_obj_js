@@ -20,12 +20,16 @@ class cuentaCorriente
    depositoEnCuenta(valor) {
     if(valor >0)
     this.saldo += valor;
+    return this.saldo;
    }
    retirarDeCuenta(valor){
     if(valor <= this.saldo)
     this.saldo -= valor;
+    return this.saldo;
    }
-
+   verSaldo() {
+    return this.saldo;
+   }
 
 
 };
@@ -34,12 +38,22 @@ class cuentaCorriente
 //en la función anterior se agrego el += para hacer agregaciones a la cuenta (sumatoria)
 //el this sirve para especificar aquí quiero que se lleva a cabo mi función a partir de lo que tengo abajo
 cuentaDeLeonardo = new cuentaCorriente();
-cuentaDeLeonardo.saldo=0;
+//cuentaDeLeonardo.#saldo=10;
+let saldo = cuentaDeLeonardo.verSaldo();
+console.log('El saldo actual es '+saldo);
 
 cuentaDeLeonardo.depositoEnCuenta(100);
-console.log(cuentaDeLeonardo);
+saldo = cuentaDeLeonardo.verSaldo();
+console.log('El saldo actual es '+saldo);
+//console.log(cuentaDeLeonardo);
 cuentaDeLeonardo.retirarDeCuenta(900);
-console.log(cuentaDeLeonardo);
+saldo = cuentaDeLeonardo.verSaldo();
+console.log('El saldo actual es '+saldo);
+//console.log(cuentaDeLeonardo);
+cuentaDeLeonardo.depositoEnCuenta(10);
+saldo = cuentaDeLeonardo.verSaldo();
+console.log('El saldo actual es '+saldo);
+
 
 const cliente1 = new Cliente(); 
 cliente1.nombreCliente = "José";
