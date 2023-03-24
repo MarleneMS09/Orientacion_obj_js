@@ -18,6 +18,7 @@ class cuentaCorriente
    }
 
    depositoEnCuenta(valor) {
+    if(valor >0)
     this.saldo += valor;
    }
    retirarDeCuenta(valor){
@@ -28,7 +29,8 @@ class cuentaCorriente
 
 
 };
-
+//si coloco un # en un valor lo tomará como valor privado y no lo mostrará, si se usa _  se dice que sea privado pero por error, lo mostrará
+//en JS por utilizamos el prefijo "_" para indicar que es un atributo privado y no debe ser alterado manualmente. Aunque ningún atributo o método es realmente privado.
 //en la función anterior se agrego el += para hacer agregaciones a la cuenta (sumatoria)
 //el this sirve para especificar aquí quiero que se lleva a cabo mi función a partir de lo que tengo abajo
 cuentaDeLeonardo = new cuentaCorriente();
@@ -66,7 +68,10 @@ cliente3.nombreCliente = "María";
 cliente3.dniCliente = "2324343"
 cliente3.numeroCuenta = "9829382";
 cliente3.saldoCuenta = 1000;; */
-console.log(cliente1);
-console.log(cuentaCorriente1);
-console.log(cliente2);
-console.log(cuentaCorriente2);
+cuentaDeLeonardo.depositoEnCuenta(100)
+console.log(cuentaDeLeonardo);
+cuentaDeLeonardo.retirarDeCuenta(100);
+console.log(cuentaDeLeonardo);
+cuentaDeLeonardo.depositoEnCuenta(-10);
+console.log(cuentaDeLeonardo);
+
