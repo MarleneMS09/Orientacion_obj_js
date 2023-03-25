@@ -31,9 +31,12 @@ cuentaDeMaria.cliente= cliente;
 console.log(cuentaDeMaria);
 
 cuentaDeLeonardo.transferirParaCuenta(100,cuentaDeMaria);
-console.log('El saldo actual (cuentaMaria) '+saldoMaria);
-
 const saldoMaria = cuentaDeMaria.verSaldo();
+console.log('El saldo actual (cuentaMaria)' + saldoMaria);
+
+const saldoLeonardo = cuentaDeLeonardo.verSaldo();
+console.log('El saldo actual (cuentaLeonardo' + saldoLeonardo);
+
 
 
 //console.log(cuentaDeLeonardo);
