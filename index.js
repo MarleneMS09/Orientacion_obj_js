@@ -42,16 +42,13 @@ cuentaDeLeonardo = new cuentaCorriente();
 let saldo = cuentaDeLeonardo.verSaldo();
 console.log('El saldo actual es '+saldo);
 
-cuentaDeLeonardo.depositoEnCuenta(100);
-saldo = cuentaDeLeonardo.verSaldo();
+saldo = cuentaDeLeonardo.depositoEnCuenta(100);
 console.log('El saldo actual es '+saldo);
 //console.log(cuentaDeLeonardo);
-cuentaDeLeonardo.retirarDeCuenta(900);
-saldo = cuentaDeLeonardo.verSaldo();
+saldo= cuentaDeLeonardo.retirarDeCuenta(900);
 console.log('El saldo actual es '+saldo);
 //console.log(cuentaDeLeonardo);
-cuentaDeLeonardo.depositoEnCuenta(10);
-saldo = cuentaDeLeonardo.verSaldo();
+saldo= cuentaDeLeonardo.depositoEnCuenta(10);
 console.log('El saldo actual es '+saldo);
 
 
