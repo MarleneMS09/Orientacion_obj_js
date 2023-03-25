@@ -1,10 +1,19 @@
 //importacion de clases
+import { Cliente } from './cliente.js';
 import {cuentaCorriente} from './cuentaCorriente.js';
 
 
 
+const cliente = new Cliente();
+cliente.nombreCliente = 'Leonardo';
+cliente. dniCliente= '13804050';
+cliente.rutCliente = "123224";
 
 const cuentaDeLeonardo = new cuentaCorriente();
+cuentaDeLeonardo.numero = '1';
+cuentaDeLeonardo.agencia= '001';
+cuentaDeLeonardo.cliente= cliente;
+console.log(cuentaDeLeonardo);
 //cuentaDeLeonardo.#saldo=10;
 let saldo = cuentaDeLeonardo.verSaldo();
 console.log('El saldo actual es '+saldo);
