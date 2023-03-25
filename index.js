@@ -45,7 +45,7 @@ console.log('El saldo actual es '+saldo);
 saldo = cuentaDeLeonardo.depositoEnCuenta(100);
 console.log('El saldo actual es '+saldo);
 //console.log(cuentaDeLeonardo);
-saldo= cuentaDeLeonardo.retirarDeCuenta(900);
+saldo= cuentaDeLeonardo.retirarDeCuenta(100);
 console.log('El saldo actual es '+saldo);
 //console.log(cuentaDeLeonardo);
 saldo= cuentaDeLeonardo.depositoEnCuenta(10);
