@@ -1,0 +1,6 @@
+
+{
+  nombreCliente;
+  dniCliente;
+  rutCliente;
+};
