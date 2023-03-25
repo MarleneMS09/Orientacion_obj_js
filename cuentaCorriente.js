@@ -13,18 +13,21 @@ export class cuentaCorriente
 
    depositoEnCuenta(valor) {
     if(valor >0)
-    this.saldo += valor;
+    this.#saldo += valor;
     return this.#saldo;
    }
    retirarDeCuenta(valor){
-    if(valor <= this.saldo)
-    this.saldo -= valor;
+    if(valor <= this.#saldo)
+    this.#saldo -= valor;
     return this.#saldo;
    }
    verSaldo() {
     return this.#saldo;
    }
-
+   transferirParaCuenta(valor,cuentaDestino){
+    this.retirarDeCuenta(valor);
+    cuentaDestino.depositoEnCuenta(valor);
+   }
 
 }
 //si coloco un # en un valor lo tomará como valor privado y no lo mostrará, si se usa _  se dice que sea privado pero por error, lo mostrará
