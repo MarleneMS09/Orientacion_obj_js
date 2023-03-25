@@ -1,0 +1,20 @@
+{
+  "name": "cuentabancopopular",
+  "version": "1.0.0",
+  "description": "Gestión cuentas corrientes de banco popular",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarleneMS09/Orientacion_obj_js.git"
+  },
+  "author": "MarleneS",
+  "license": "ISC",
+   "type" : "module",
+  "bugs": {
+    "url": "https://github.com/MarleneMS09/Orientacion_obj_js/issues"
+  },
+  "homepage": "https://github.com/MarleneMS09/Orientacion_obj_js#readme"
+}

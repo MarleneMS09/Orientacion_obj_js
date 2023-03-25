@@ -25,7 +25,7 @@ export class cuentaCorriente
    }
 
 
-};
+}
 //si coloco un # en un valor lo tomará como valor privado y no lo mostrará, si se usa _  se dice que sea privado pero por error, lo mostrará
 //en JS por utilizamos el prefijo "_" para indicar que es un atributo privado y no debe ser alterado manualmente. Aunque ningún atributo o método es realmente privado.
 //en la función anterior se agrego el += para hacer agregaciones a la cuenta (sumatoria)
