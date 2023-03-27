@@ -2,41 +2,33 @@
 import { Cliente } from './cliente.js';
 import {cuentaCorriente} from './cuentaCorriente.js';
 
-const cliente = new Cliente();
-cliente.nombreCliente = 'Leonardo';
-cliente. dniCliente= '13804050';
-cliente.rutCliente = "123224";
+const cliente = new Cliente('Leonardo', '13804050', '123224');
 
-const cuentaDeLeonardo = new cuentaCorriente();
-cuentaDeLeonardo.numero = '1';
-cuentaDeLeonardo.agencia= '001';
-cuentaDeLeonardo.cliente= cliente;
+const cliente2 = new Cliente('Maria', '16979808', '8989' );
+console.log(cliente);
+console.log(cliente2);
+
+const cuentaDeLeonardo = new cuentaCorriente(cliente, '1', '001');
+const cuentaDeMaria = new cuentaCorriente(cliente2, '2', '002');
 //console.log(cuentaDeLeonardo);
 //cuentaDeLeonardo.#saldo=10;
 let saldo = cuentaDeLeonardo.verSaldo();
 //console.log('El saldo actual es '+saldo);
 saldo = cuentaDeLeonardo.depositoEnCuenta(150);
 console.log('El saldo actual (CuentaLeonardo) '+saldo);
-
-
-const cliente2 = new Cliente();
-cliente2.nombreCliente = 'Maria';
-cliente2. dniCliente= '16979808';
-cliente2.rutCliente = "8989";
-
-const cuentaDeMaria = new cuentaCorriente();
-cuentaDeMaria.numero = '2';
-cuentaDeMaria.agencia= '002';
-cuentaDeMaria.cliente= cliente2;
-console.log(cuentaDeMaria.cliente);
-
 let parametroValor= 100;
-cuentaDeLeonardo.transferirParaCuenta(100,cuentaDeMaria);
-const saldoMaria = cuentaDeMaria.verSaldo();
-console.log('El saldo actual(cuentaMaria.cliente.nombreCliente): '  +saldoMaria);
+console.log (cuentaDeMaria.cliente);
+cuentaDeMaria.cliente = 0;
+console.log(cuentaMaria.cliente);
 
-const saldoLeonardo = cuentaDeLeonardo.verSaldo();
-console.log('El saldo actual(cuentaLeonardo): '  +saldoLeonardo);
+
+
+//cuentaDeLeonardo.transferirParaCuenta(100,cuentaDeMaria);
+//const saldoMaria = cuentaDeMaria.verSaldo();
+//console.log('El saldo actual(cuentaMaria.cliente.nombreCliente): '  +saldoMaria);
+
+//const saldoLeonardo = cuentaDeLeonardo.verSaldo();
+//console.log('El saldo actual(cuentaLeonardo): '  +saldoLeonardo);
 
 
 
