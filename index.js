@@ -1,13 +1,11 @@
+import {cliente } from './cliente.js';
 import {cuentaCorriente} from './cuentaCorriente.js';
-import { Cliente } from './cliente.js';
 
+const cliente = new cliente('Leonardo','13804050','123224');
+const cliente2 = new cliente('María','16979808','8989');
 
-
-const cliente = new Cliente('Leonardo','13804050','123224');
-const cliente2 = new Cliente('María','16979808','8989');
-
-const cuentaDeLeonardo = new CuentaCorriente(cliente, '1', '001');
-const cuentaDeMaria = new CuentaCorriente(cliente2,'2','002');
+const cuentaDeLeonardo = new cuentaCorriente(cliente, '1', '001');
+const cuentaDeMaria = new cuentaCorriente(cliente2,'2','002');
 
 let saldo = cuentaDeLeonardo.verSaldo(); 
 
@@ -16,15 +14,16 @@ cuentaDeLeonardo.transferirParaCuenta(parametroValor,cuentaDeMaria);
 
 const saldoMaria = cuentaDeMaria.verSaldo();
 
-console.log('Cuenta de Maria',cuentaDeMaria);
+//console.log('Cuenta de Maria',cuentaDeMaria);
 
-console.log('El Saldo actual (cuentaMaria) '+saldoMaria);
+//console.log('El Saldo actual (cuentaMaria) '+saldoMaria);
+
+console.log(cuentaDeMaria.cantidadCuentas);
+
 
 const saldoLeonardo = cuentaDeLeonardo.verSaldo();
 console.log('El Saldo actual (cuentaLeonardo) '+saldoLeonardo);
-console.log(CuentaCorriente.cantidadCuentas);
-
-console.log(CuentaCorriente.cantidadCuentas);
+console.log(cuentaCorriente.cantidadCuentas);
 
 
 
@@ -58,7 +57,7 @@ console.log(CuentaCorriente.cantidadCuentas);
 
 
 
-
+/*
 /*const cliente = new Cliente('Leonardo', '13804050', '123224');
 
 const cliente2 = new Cliente('Maria', '16979808', '8989' );
@@ -77,8 +76,7 @@ let parametroValor= 100;
 console.log (cuentaDeMaria.cliente);
 cuentaDeMaria.cliente = 0;
 console.log(cuentaMaria.cliente);
-
-
+*/
 
 //cuentaDeLeonardo.transferirParaCuenta(100,cuentaDeMaria);
 //const saldoMaria = cuentaDeMaria.verSaldo();
@@ -95,8 +93,6 @@ console.log('El saldo actual es '+saldo);
 //console.log(cuentaDeLeonardo);
 saldo= cuentaDeLeonardo.depositoEnCuenta(10);
 console.log('El saldo actual es '+saldo); */
-
-
 
 
 
@@ -133,5 +129,4 @@ console.log(cuentaDeLeonardo);
 cuentaDeLeonardo.retirarDeCuenta(100);
 console.log(cuentaDeLeonardo);
 cuentaDeLeonardo.depositoEnCuenta(-10);
-console.log(cuentaDeLeonardo); */
-
+console.log(cuentaDeLeonardo); */ 

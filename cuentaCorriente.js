@@ -1,13 +1,14 @@
+import {cliente} from "./cliente.js"
 export class cuentaCorriente
 {
     #cliente;
     numero;
     agencia;
     #saldo;
-    static cantidadCuentas = 0;
+     static cantidadCuentas = 0;
 
     set cliente(valor) {
-        if (valor instanceof Cliente)
+        if (valor instanceof cliente)
             this.#cliente = valor;
     }
 
@@ -20,7 +21,7 @@ export class cuentaCorriente
         this.numero = numero;
         this.agencia = agencia;
         this.#saldo = 0;
-        CuentaCorriente.cantidadCuentas++;
+        cuentaCorriente.cantidadCuentas++;
     }
 
     depositoEnCuenta(valor) {
