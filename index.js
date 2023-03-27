@@ -28,11 +28,8 @@ const cuentaDeMaria = new cuentaCorriente();
 cuentaDeMaria.numero = '2';
 cuentaDeMaria.agencia= '002';
 cuentaDeMaria.cliente= cliente2;
-if (cuentaDeMaria.cliente)
-console.log(cuentaDeMaria,cliente);
- else 
- console.log(cuentaDeMaria);
- 
+console.log(cuentaDeMaria.cliente);
+
 let parametroValor= 100;
 cuentaDeLeonardo.transferirParaCuenta(100,cuentaDeMaria);
 const saldoMaria = cuentaDeMaria.verSaldo();

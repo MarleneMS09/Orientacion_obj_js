@@ -8,6 +8,14 @@ export class cuentaCorriente
    set cliente (valor) {
    this.#cliente = valor;
    }
+
+   get cliente() {
+      return this.#cliente;
+   }
+
+
+
+
    constructor() {
     this.#cliente= null;
     this.numero = '';
