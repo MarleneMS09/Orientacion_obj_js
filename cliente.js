@@ -1,13 +1,12 @@
 export class Cliente
 {
-  nombreCliente;
-  dniCliente;
-  rutCliente;
+    nombreCliente;
+    dniCliente;
+    rutCliente;
 
-
-constructor() {
-  this.nombreCliente = nombreCliente; 
-  this.dniCliente = dniCliente;
-  this.rutCliente = rutCliente; 
-}
+    constructor(nombreCliente, dniCliente, rutCliente) {
+        this.nombreCliente = nombreCliente;
+        this.dniCliente = dniCliente;
+        this.rutCliente = rutCliente;
+    }
 }

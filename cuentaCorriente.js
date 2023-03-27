@@ -1,48 +1,54 @@
-export class cuentaCorriente 
+export class cuentaCorriente
 {
-   cliente;
-   numero;
-   agencia;
-   #saldo;
+    #cliente;
+    numero;
+    agencia;
+    #saldo;
+    static cantidadCuentas = 0;
 
-   set Cliente (valor) {
-   this.cliente = valor;
-   }
+    set cliente(valor) {
+        if (valor instanceof Cliente)
+            this.#cliente = valor;
+    }
 
-   get cliente() {
-      return this.cliente;
-   }
+    get cliente() {
+        return this.#cliente;
+    }
 
+    constructor(cliente, numero, agencia) {
+        this.cliente = cliente;
+        this.numero = numero;
+        this.agencia = agencia;
+        this.#saldo = 0;
+        CuentaCorriente.cantidadCuentas++;
+    }
 
+    depositoEnCuenta(valor) {
+        if (valor > 0)
+            this.#saldo += valor;
+        return this.#saldo;
+    }
 
+    retirarDeCuenta(valor) {
+        if (valor <= this.#saldo)
+            this.#saldo -= valor;
+        return this.#saldo;
+    }
 
-   constructor(cliente,numero, agencia) {
-    this.setCliente(cliente);
-    this.cliente= null;
-    this.numero = numero;
-    this.agencia = agencia;
-    this.#saldo = 0;
-   }
+    verSaldo() {
+        return this.#saldo;
+    }
 
-   depositoEnCuenta(valor) {
-    if(valor >0)
-    this.#saldo += valor;
-    return this.#saldo;
-   }
-   retirarDeCuenta(valor){
-    if(valor <= this.#saldo)
-    this.#saldo -= valor;
-    return this.#saldo;
-   }
-   verSaldo() {
-    return this.#saldo;
-   }
-   transferirParaCuenta(valor,cuentaDestino){
-    this.retirarDeCuenta(valor);
-    cuentaDestino.depositoEnCuenta(valor);
-   }
-
+    transferirParaCuenta(valor,cuentaDestino) {
+        this.retirarDeCuenta(valor);
+        cuentaDestino.depositoEnCuenta(valor);
+        valor = 200;
+        valor = valor*1000;
+    }
 }
+
+
+
 //si coloco un # en un valor lo tomará como valor privado y no lo mostrará, si se usa _  se dice que sea privado pero por error, lo mostrará
 //en JS por utilizamos el prefijo "_" para indicar que es un atributo privado y no debe ser alterado manualmente. Aunque ningún atributo o método es realmente privado.
 //en la función anterior se agrego el += para hacer agregaciones a la cuenta (sumatoria)
